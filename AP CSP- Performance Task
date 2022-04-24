@@ -1,0 +1,65 @@
+first_number = list(range(1,10))
+secound_number = list(range(0,10))
+num_problems = len(first_number)
+
+print("Hello, Welcome To a Math Adenture ")
+name = ""
+print(" ")
+
+while name == "":
+  name_input = input("What is your name?")
+  print("Ok" + " " + name_input + " " + "get ready")
+  print(" ")
+  name = str(name_input.title())
+
+ans = input("Have you ever played this? (yes/no)")
+score = 0
+attempts = 6
+
+if ans == "no":
+  print(" ")
+  print("This is a warm up question.")
+  ans = input("What is 2*5:"+ " ")
+  if ans.lower() == "10":
+    score += 1
+  print("Correct")
+else:
+  print("Have a good day")
+  print(" ")
+print("Ok get ready now :)")
+def calculate(type):
+  score=0
+  #Through all problems loop
+for i in range(num_problems):
+#Begin cited code
+    #https://codehs.com/tutorial/david/sample-a-csp-performance-task-1
+  #Without going to new line print first number
+  print(first_number[i], end = " ")
+  if (type == "no"):
+    #Print operator without going to new line
+    print("*", end=" ")
+    correct = secound_number[i] * first_number[i]
+  else:
+    # Print operator without going to new line
+    print(" * ", end = " ")
+    correct = secound_number[i] * first_number[i]
+#End cited code
+  #Print secound number and go to new line
+  print(secound_number[i])
+  #Get answer from user
+  answer=int(input("What is the answer: "))
+  if answer == correct:
+     #Infrom and add score
+    print("That is the correct answer!!" + name_input + " " + "!!")
+    if answer == correct:
+      score += 1
+      print("Your current score is",score)
+  else:
+    print("That is incorrect ")
+  print()
+
+
+
+
+    
+  
